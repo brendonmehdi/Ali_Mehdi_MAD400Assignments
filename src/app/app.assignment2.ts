@@ -1,3 +1,3 @@
-export class MyClass { 
-    constructor(public prop1: string, public prop2: number, public prop3?: boolean, public prop4: string = 'default') {} 
+export class Assignment2 { 
+    constructor(public assign2Bool?: boolean, public assign2TextDef: string = 'default') {} 
 }
