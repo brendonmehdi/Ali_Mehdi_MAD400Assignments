@@ -1,4 +1,6 @@
-<div>
+<p>content-list-item works!</p>
+<!-- updated below to use isodd to determine if the spot in the arrray is odd to aplly proper class name for css -->
+<div [ngClass]="{'odd-item': isOdd, 'even-item': !isOdd}">
     <h2>{{ contentItem?.title }}</h2>
     <img [src]="contentItem?.imgSrc" alt="{{ contentItem?.title }}">
     <p>{{ contentItem?.description }}</p>
@@ -10,3 +12,5 @@
         </ul>
     </div>
 </div>
+
+

@@ -11,6 +11,9 @@ import { CommonModule } from '@angular/common';
 })
 export class ContentListItemComponent {
   @Input() contentItem?: IContent;
+// content-list-item.component.ts
+  @Input() isOdd: boolean = false;
+
 
   constructor() { }
 

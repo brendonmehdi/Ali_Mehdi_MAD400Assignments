@@ -1,5 +1,15 @@
 <p>content-list works!</p>
-<app-content-list-item [contentItem]="contents[0]"></app-content-list-item>
+<!-- <app-content-list-item [contentItem]="contents[0]"></app-content-list-item>
 <app-content-list-item [contentItem]="contents[1]"></app-content-list-item>
 <app-content-list-item [contentItem]="contents[2]"></app-content-list-item>
-<app-content-list-item [contentItem]="contents[3]"></app-content-list-item>
+<app-content-list-item [contentItem]="contents[3]"></app-content-list-item> -->
+<!-- <app-content-list-item *ngFor="let item of contents" [contentItem]="item"></app-content-list-item> -->
+
+<!-- content-list.component.html -->
+
+<!-- updated the appcontent below to use isodd input so i can determine which array index is odd that way i can apply the correct css in the contentlistitme component -->
+<app-content-list-item *ngFor="let item of contents; let i = index"
+                       [contentItem]="item"
+                       [isOdd]="i % 2 !== 0">
+</app-content-list-item>
+

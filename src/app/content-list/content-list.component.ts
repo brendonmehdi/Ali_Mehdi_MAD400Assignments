@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { IContent } from '../icontent'; // Adjust the path to where you created icontent.ts
 import { ContentListItemComponent } from '../content-list-item/content-list-item.component';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-content-list',
   standalone: true,
-  imports: [ContentListItemComponent],
+  imports: [ContentListItemComponent, CommonModule],
   templateUrl: './content-list.component.html',
   styleUrls: ['./content-list.component.css']
 })
@@ -28,14 +29,14 @@ export class ContentListComponent implements OnInit {
       title: 'Item Three',
       description: 'Description of Item Three',
       author: 'Author Three',
-      imgSrc: 'path/to/image1.jpg', // Placeholder image path
+      imgSrc: 'path/to/image3.jpg', // Placeholder image path
       tags: ['tag5', 'tag6']
     },
     {
-      title: 'Item Three',
-      description: 'Description of Item Three',
-      author: 'Author Three',
-      imgSrc: 'path/to/image2.jpg', // Placeholder image path
+      title: 'Item Four',
+      description: 'Description of Item Four',
+      author: 'Author Four',
+      imgSrc: 'path/to/image4.jpg', // Placeholder image path
       tags: ['tag7', 'tag8']
     },
   

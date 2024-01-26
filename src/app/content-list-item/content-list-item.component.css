@@ -1,0 +1,11 @@
+.content-item {
+    border: 2px solid black;
+}
+
+.odd-item {
+    background-color: teal;
+  }
+  
+  .even-item {
+    background-color: pink;
+  }
