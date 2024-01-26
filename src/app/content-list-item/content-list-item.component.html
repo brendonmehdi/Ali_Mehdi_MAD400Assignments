@@ -1,1 +1,12 @@
-<p>content-list-item works!</p>
+<div>
+    <h2>{{ contentItem?.title }}</h2>
+    <img [src]="contentItem?.imgSrc" alt="{{ contentItem?.title }}">
+    <p>{{ contentItem?.description }}</p>
+    <p>Author: {{ contentItem?.author }}</p>
+    <div class="content-item">
+        <strong>Tags:</strong>
+        <ul>
+            <li *ngFor="let tag of contentItem?.tags">{{ tag }}</li>
+        </ul>
+    </div>
+</div>
