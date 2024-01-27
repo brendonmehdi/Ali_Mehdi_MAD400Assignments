@@ -7,7 +7,7 @@
 
 <!-- content-list.component.html -->
 
-<!-- updated the appcontent below to use isodd input so i can determine which array index is odd that way i can apply the correct css in the contentlistitme component -->
+<!-- I updated the appcontent below to use isodd input so i can determine which array index is odd that way i can apply the correct css in the contentlistitme component -->
 <app-content-list-item *ngFor="let item of contents; let i = index"
                        [contentItem]="item"
                        [isOdd]="i % 2 !== 0">
