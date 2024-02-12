@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { IContent } from '../icontent'; // Adjust the path as necessary
+import { IContent } from '../icontent';
 import { ContentListItemComponent } from '../content-list-item/content-list-item.component';
+import { MovieService } from '../movie.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -11,10 +12,15 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./content-list.component.css']
 })
 export class ContentListComponent implements OnInit {
+  contents: IContent[] = []; // Array of content items
   
-  constructor() { }
+  constructor(private movieService: MovieService) { } // Injects the movie service
 
-  ngOnInit(): void {
-    // Fetch data using a service (to be implemented)
+    ngOnInit(): void {
+      this.movieService.fetchData().subscribe(data => { // Subscribes to the fetchData method
+        this.contents = data; // Assigns the data to the contents array
+    });
+
+    
   }
 }

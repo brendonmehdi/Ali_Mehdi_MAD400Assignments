@@ -14,6 +14,8 @@ export class ContentListItemComponent {
 // content-list-item.component.ts
   @Input() isOdd: boolean = false;
 
+  // @Input() content: IContent | undefined; // Input property for content item didnt need this was overcomplicating things
+
 
   constructor() { }
 
